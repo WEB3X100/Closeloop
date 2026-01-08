@@ -26,36 +26,38 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-2 mb-4">From Demo to First Appointment <br/> in 7 Business Days</h2>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">From Demo to First Appointment <br/> in 7 Business Days</h2>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
+          <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-100 -z-10"></div>
 
           <div className="grid md:grid-cols-3 gap-12">
             {steps.map((step, idx) => (
-              <div key={idx} className="relative bg-white pt-4">
-                <div className="w-16 h-16 bg-white border-2 border-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-6 shadow-sm mx-auto md:mx-0 relative z-10">
-                  <step.icon size={32} />
-                  <div className="absolute -top-3 -right-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+              <div key={idx} className="relative bg-white pt-4 group">
+                <div className="w-20 h-20 bg-white border-2 border-slate-100 group-hover:border-emerald-500 rounded-2xl flex items-center justify-center text-slate-400 group-hover:text-emerald-500 mb-8 shadow-sm group-hover:shadow-lg transition-all duration-300 mx-auto md:mx-0 relative z-10">
+                  <step.icon size={36} />
+                  <div className="absolute -top-3 -right-3 bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded-full">
                     {step.day}
                   </div>
                 </div>
                 
-                <h3 className="heading-3 mb-3">{step.title}</h3>
-                <p className="body-medium text-text-secondary">{step.desc}</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{step.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 bg-green-50 rounded-2xl p-8 border border-green-100 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex-1">
-                <h4 className="text-xl font-bold text-green-900 mb-2">📊 The CloseLoop Guarantee</h4>
-                <p className="text-green-800">If you don't book at least 10 additional appointments in your first 30 days, we'll work for free until you do. No excuses.</p>
+          <div className="mt-20 bg-emerald-900 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            
+            <div className="flex-1 relative z-10">
+                <h4 className="text-2xl font-bold text-white mb-2">📊 The CloseLoop Guarantee</h4>
+                <p className="text-emerald-100 text-lg">If you don't book at least 10 additional appointments in your first 30 days, we'll work for free until you do. No excuses.</p>
             </div>
-            <a href="#demo" className="btn-green-primary whitespace-nowrap">Schedule Discovery Call →</a>
+            <a href="#demo" className="relative z-10 bg-white text-emerald-900 hover:bg-emerald-50 font-bold px-8 py-4 rounded-full shadow-lg transition-colors whitespace-nowrap">Schedule Discovery Call →</a>
           </div>
         </div>
       </div>

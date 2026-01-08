@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
-import { Textarea } from "../ui/textarea";
 import { CheckCircle2, Lock } from "lucide-react";
 import axios from 'axios';
 import { toast } from "sonner";
@@ -36,9 +35,7 @@ export function FinalCTA() {
     setLoading(true);
     try {
         const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-        // Check if BACKEND_URL is available
         if (!BACKEND_URL) {
-            console.warn("Backend URL not set, simulating success");
             setTimeout(() => {
                  toast.success("Demo requested! We'll call you shortly.");
                  setLoading(false);
@@ -48,7 +45,6 @@ export function FinalCTA() {
 
         await axios.post(`${BACKEND_URL}/api/leads`, formData);
         toast.success("Demo requested! We'll call you shortly.");
-        // Reset or redirect could happen here
     } catch (error) {
         console.error(error);
         toast.error("Something went wrong. Please try again.");
@@ -58,96 +54,101 @@ export function FinalCTA() {
   };
 
   return (
-    <section id="demo" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 -z-10"></div>
-      <div className="container mx-auto px-4">
+    <section id="demo" className="py-32 relative overflow-hidden bg-[#020817]">
+      {/* Background Effects */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           
           <div className="text-white space-y-8">
-            <h2 className="heading-1 text-white">
-              See Your First AI Appointment Within 7 Days
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              See Your First AI Appointment <span className="text-emerald-400">Within 7 Days</span>
             </h2>
-            <p className="text-xl text-blue-100/90 leading-relaxed">
+            <p className="text-xl text-slate-400 leading-relaxed">
               Join 127+ agencies using CloseLoop to never miss a commission again. Custom implementation. White-glove service.
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-5">
               {[
                 "AI calls your leads within 3 minutes",
                 "3-5X more appointments guaranteed",
                 "Zero manual calling required",
                 "Month-to-month, cancel anytime"
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="text-green-400 h-6 w-6" />
+                <div key={i} className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                  <CheckCircle2 className="text-emerald-400 h-6 w-6 shrink-0" />
                   <span className="text-lg font-medium">{item}</span>
                 </div>
               ))}
             </div>
             
-            <div className="flex gap-4 pt-4 opacity-70">
-                <span className="flex items-center gap-2 text-sm"><Lock size={14}/> SOC 2 Compliant</span>
+            <div className="flex gap-6 pt-4 text-slate-500 font-medium">
+                <span className="flex items-center gap-2 text-sm"><Lock size={16}/> SOC 2 Compliant</span>
                 <span className="flex items-center gap-2 text-sm">Stripe Verified</span>
             </div>
           </div>
 
           {/* Progressive Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
-            <div className="mb-6">
-                <div className="flex gap-2 mb-4">
+          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl border border-white/10">
+            <div className="mb-8">
+                <div className="flex gap-2 mb-6">
                     {[1,2,3].map(i => (
-                        <div key={i} className={`h-1 flex-1 rounded-full transition-colors ${step >= i ? 'bg-green-500' : 'bg-gray-200'}`}></div>
+                        <div key={i} className={`h-1.5 flex-1 rounded-full transition-colors ${step >= i ? 'bg-emerald-500' : 'bg-slate-100'}`}></div>
                     ))}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Book Your Free Demo</h3>
-                <p className="text-gray-500">We'll show you exactly how many leads we can recover.</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Book Your Free Demo</h3>
+                <p className="text-slate-500">We'll show you exactly how many leads we can recover.</p>
             </div>
 
-            <form onSubmit={step === 3 ? handleSubmit : handleNext} className="space-y-4">
+            <form onSubmit={step === 3 ? handleSubmit : handleNext} className="space-y-6">
               
               <div className={step >= 1 ? 'block' : 'hidden'}>
-                <label className="block text-sm font-medium mb-1.5">Work Email</label>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Work Email</label>
                 <Input 
                     name="email" 
                     placeholder="name@agency.com" 
                     required 
                     value={formData.email}
                     onChange={handleChange}
-                    className="h-12 text-lg"
+                    className="h-14 text-lg bg-slate-50 border-slate-200 focus:ring-emerald-500"
                 />
               </div>
 
               {step >= 2 && (
-                 <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4">
+                 <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
                     <div>
-                        <label className="block text-sm font-medium mb-1.5">Full Name</label>
+                        <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
                         <Input 
                             name="name" 
                             placeholder="John Doe" 
                             required 
                             value={formData.name}
                             onChange={handleChange}
+                            className="h-12 bg-slate-50 border-slate-200"
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium mb-1.5">Phone Number</label>
+                        <label className="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
                         <Input 
                             name="phone" 
                             placeholder="(555) 555-5555" 
                             required 
                             value={formData.phone}
                             onChange={handleChange}
+                             className="h-12 bg-slate-50 border-slate-200"
                         />
                     </div>
                  </div>
               )}
 
               {step >= 3 && (
-                 <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4">
+                 <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
                     <div>
-                        <label className="block text-sm font-medium mb-1.5">Monthly Lead Volume</label>
+                        <label className="block text-sm font-semibold text-slate-700 mb-2">Monthly Lead Volume</label>
                         <Select onValueChange={(val) => handleSelect('leads', val)}>
-                            <SelectTrigger>
+                            <SelectTrigger className="h-12 bg-slate-50 border-slate-200">
                                 <SelectValue placeholder="Select volume" />
                             </SelectTrigger>
                             <SelectContent>
@@ -159,9 +160,9 @@ export function FinalCTA() {
                         </Select>
                     </div>
                     <div>
-                        <label className="block text-sm font-medium mb-1.5">Current CRM</label>
+                        <label className="block text-sm font-semibold text-slate-700 mb-2">Current CRM</label>
                         <Select onValueChange={(val) => handleSelect('crm', val)}>
-                            <SelectTrigger>
+                            <SelectTrigger className="h-12 bg-slate-50 border-slate-200">
                                 <SelectValue placeholder="Select CRM" />
                             </SelectTrigger>
                             <SelectContent>
@@ -175,19 +176,19 @@ export function FinalCTA() {
                  </div>
               )}
 
-              <div className="pt-4">
+              <div className="pt-2">
                 {step < 3 ? (
-                    <Button type="submit" className="w-full h-12 text-lg btn-green-primary">
+                    <Button type="submit" className="w-full h-14 text-lg bg-emerald-500 hover:bg-emerald-600 font-bold shadow-lg shadow-emerald-200">
                         Continue →
                     </Button>
                 ) : (
-                    <Button type="submit" className="w-full h-12 text-lg btn-green-primary" disabled={loading}>
+                    <Button type="submit" className="w-full h-14 text-lg bg-emerald-500 hover:bg-emerald-600 font-bold shadow-lg shadow-emerald-200" disabled={loading}>
                         {loading ? 'Submitting...' : 'Book My Demo →'}
                     </Button>
                 )}
               </div>
               
-              <p className="text-xs text-center text-gray-400 mt-4 flex items-center justify-center gap-1">
+              <p className="text-xs text-center text-slate-400 mt-6 flex items-center justify-center gap-1">
                 <Lock size={12}/> Your data is encrypted and never shared.
               </p>
             </form>

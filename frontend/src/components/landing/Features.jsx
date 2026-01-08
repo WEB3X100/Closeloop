@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, Bot, FileText, Video } from "lucide-react";
-import { Button } from "../ui/button";
 
 export function Features() {
   const features = [
@@ -34,46 +33,46 @@ export function Features() {
   ];
 
   return (
-    <section id="features" className="py-24 bg-section">
+    <section id="features" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-green-600 font-semibold tracking-wider text-sm uppercase mb-3 block">The Solution</span>
-          <h2 className="heading-2">Your Custom AI System <br/> Implemented In 7 Days</h2>
+          <span className="text-emerald-600 font-bold tracking-wider text-sm uppercase mb-3 block">The Solution</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900">Your Custom AI System <br/> Implemented In 7 Days</h2>
         </div>
 
         <div className="flex flex-col gap-24">
           {features.map((feature, idx) => (
-            <div key={idx} className={`flex flex-col lg:flex-row gap-12 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
-              <div className="flex-1 space-y-6">
-                <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-green-700 mb-2">
-                  <feature.icon size={28} />
+            <div key={idx} className={`flex flex-col lg:flex-row gap-16 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className="flex-1 space-y-8">
+                <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-700 mb-2 shadow-sm">
+                  <feature.icon size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-custom">{feature.headline}</h3>
-                <p className="body-large text-text-secondary">{feature.desc}</p>
+                <h3 className="text-3xl font-bold text-slate-900">{feature.headline}</h3>
+                <p className="text-lg text-slate-600 leading-relaxed">{feature.desc}</p>
                 
-                <div className="bg-white border-l-4 border-green-500 p-4 rounded-r-lg shadow-sm">
-                  <p className="font-semibold text-text-primary">Proof Point: <span className="text-green-700">{feature.stat}</span></p>
+                <div className="bg-white border-l-4 border-emerald-500 p-6 rounded-r-xl shadow-sm">
+                  <p className="font-semibold text-slate-800 text-lg">Proof Point: <span className="text-emerald-700 font-bold">{feature.stat}</span></p>
                 </div>
                 
-                <a href={feature.link} className="inline-flex items-center text-green-700 font-semibold hover:text-green-800 group">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <a href={feature.link} className="inline-flex items-center text-emerald-700 font-bold text-lg hover:text-emerald-800 group">
+                  Learn More <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
               
               <div className="flex-1 w-full">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border aspect-[4/3] group">
-                  <div className="absolute inset-0 bg-green-900/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 aspect-[4/3] group">
+                  <div className="absolute inset-0 bg-emerald-900/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                   <img src={feature.img} alt={feature.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                   
                   {/* Floating UI Element Mock */}
-                  <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                            <feature.icon size={20} />
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-xl shadow-lg z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                     <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
+                            <feature.icon size={24} />
                         </div>
                         <div>
-                            <div className="font-semibold text-sm">{feature.title}</div>
-                            <div className="text-xs text-muted-foreground">Status: Active & Converting</div>
+                            <div className="font-bold text-slate-900">{feature.title}</div>
+                            <div className="text-sm text-emerald-600 font-medium">Status: Active & Converting</div>
                         </div>
                      </div>
                   </div>
