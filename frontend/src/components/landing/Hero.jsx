@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, PlayCircle, Phone, Calendar, MessageSquare, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, PlayCircle, Phone, Calendar, MessageSquare, Star, Mic, FileText, Video } from "lucide-react";
 
 export function Hero() {
   return (
@@ -13,7 +13,7 @@ export function Hero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-16 lg:mb-24">
             
-          {/* Social Proof Badge - Centered & Glass */}
+          {/* Social Proof Badge */}
           <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md rounded-full pl-2 pr-5 py-1.5 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 shadow-xl shadow-emerald-900/20">
             <div className="flex -space-x-2">
               {[1,2,3].map(i => (
@@ -32,17 +32,17 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Main Headline - Centered & High Contrast */}
+          {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-8 leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 drop-shadow-sm">
             Get <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">3-5X More Appointments</span><br className="hidden md:block"/> Without Making a Single Call
           </h1>
 
-          {/* Subheadline - Centered & Readable */}
+          {/* Subheadline */}
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
             Tired of losing deals to voicemail? Stop manual follow-ups. Our AI calls your leads 3-5x until contact, handles objections, and books appointments automatically.
           </p>
 
-          {/* CTA Buttons - Centered */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mb-12 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
             <a href="#demo" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-[#020817] text-lg font-bold px-8 py-4 rounded-full transition-all duration-200 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transform hover:-translate-y-0.5">
               Book Your Free Demo <ArrowRight className="h-5 w-5" />
@@ -52,16 +52,52 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Trust Indicators - Centered Flex */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm md:text-base font-medium text-slate-400 animate-in fade-in duration-700 delay-500">
+          {/* Trust Indicators */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm md:text-base font-medium text-slate-400 animate-in fade-in duration-700 delay-500 mb-12">
             <span className="flex items-center gap-2.5"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> Custom implementation</span>
             <span className="flex items-center gap-2.5"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> Live in 7 business days</span>
             <span className="flex items-center gap-2.5"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> White-glove setup included</span>
           </div>
+
+          {/* Product Trio Cards - Added Here */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl w-full animate-in fade-in slide-in-from-bottom-8 duration-700 delay-700">
+             {/* Card 1: Voice Agent */}
+             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-left hover:bg-white/10 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                    <Mic size={20} />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">Voice Agent</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                    Calls leads within 2 mins. Qualifies intent, handles objections, and live-transfers warm prospects.
+                </p>
+             </div>
+
+             {/* Card 2: AI Content Machine */}
+             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-left hover:bg-white/10 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                    <Video size={20} />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">AI Content Machine</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                    Auto-generates social reels & walkthroughs from listing photos. Viral-ready content in seconds.
+                </p>
+             </div>
+
+             {/* Card 3: AI Brochure Generator */}
+             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-left hover:bg-white/10 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                    <FileText size={20} />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">Brochure Generator</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                    Instantly creates branded PDFs with market comps & neighborhood stats. Sent automatically to leads.
+                </p>
+             </div>
+          </div>
         </div>
 
-        {/* Hero Visual Mockup - Centered */}
-        <div className="relative max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500 px-2">
+        {/* Hero Visual Mockup */}
+        <div className="relative max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500 px-2 mt-16">
             
           {/* Glass Card Container */}
           <div className="relative rounded-2xl border border-white/10 bg-[#0f172a]/60 backdrop-blur-2xl shadow-2xl overflow-hidden">
@@ -149,20 +185,13 @@ export function Hero() {
                                 <div className="text-xs text-slate-500">Tomorrow at 2:00 PM • via SMS</div>
                             </div>
                         </div>
-                        <div className="bg-[#1e293b]/50 border border-white/5 rounded-xl p-4 flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400"><MessageSquare size={18}/></div>
-                            <div>
-                                <div className="text-sm text-slate-200 font-medium">Brochure Sent</div>
-                                <div className="text-xs text-slate-500">123 Maple Ave Property Guide</div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
              </div>
           </div>
 
-          {/* Floating Stats Badges - Properly Centered */}
+          {/* Floating Stats Badges */}
           <div className="hidden md:flex absolute -bottom-8 left-1/2 -translate-x-1/2 w-full justify-center gap-4 px-4 z-20">
               {[
                 { label: "10k+ Leads Called", icon: "📞" },

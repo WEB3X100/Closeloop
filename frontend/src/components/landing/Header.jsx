@@ -44,7 +44,6 @@ export function Header() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="#demo" className="text-sm font-medium text-white hover:text-emerald-400 transition-colors">Log in</a>
           <a href="#demo" className="bg-white text-[#020817] hover:bg-emerald-50 text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg">
             Book Demo
           </a>
