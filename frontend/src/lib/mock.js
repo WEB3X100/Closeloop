@@ -47,23 +47,39 @@ export const MOCK_TESTIMONIALS = [
 
 export const MOCK_FAQS = [
     {
-        question: "Does it sound like a robot?",
-        answer: "No. We use ElevenLabs enterprise voice AI that's indistinguishable from human agents. We clone your voice or use professional agent voices. 94% of leads don't realize it's AI."
+        question: "How quickly does the AI call new leads?",
+        answer: "The AI voice agent initiates calls within 2 minutes of a new lead being received, ensuring maximum speed-to-lead efficiency."
     },
     {
-        question: "What if a lead asks something the AI can't answer?",
-        answer: "The AI seamlessly transfers to your team via instant call forwarding. You get a text with full conversation context before picking up."
+        question: "Can the AI agent handle objections and tough questions?",
+        answer: "Yes. The AI is trained with advanced conversation flows to handle common objections, qualify intent, and transfer warm leads directly to your calendar or phone."
     },
     {
-        question: "How long does implementation really take?",
-        answer: "7 business days from signed agreement to fully operational. Day 1 is discovery, Days 2-5 we build your custom system, Days 6-7 we train your team and go live."
+        question: "What CRMs and lead sources are supported?",
+        answer: "CloseLoop integrates with popular CRMs like Follow Up Boss, KVCore, HubSpot, and lead sources like Zillow, Realtor.com, and Facebook Ads."
     },
     {
-        question: "What CRMs can you integrate with?",
-        answer: "We integrate with all major platforms: Zillow Premier Agent, Realtor.com, BoomTown, Follow Up Boss, Chime, KVCore, LionDesk, Wise Agent, Realty Juggler, and 40+ others via Zapier."
+        question: "How long does setup take?",
+        answer: "Your AI voice agent can be live within 7 business days. Setup includes white-glove service, script customization, CRM integration, and local number provisioning."
     },
     {
-        question: "Can we customize what the AI says?",
-        answer: "Absolutely. During discovery, we build custom scripts tailored to your market, price points, and selling style. You approve every word before we go live."
+        question: "Is this AI solution only for inbound leads?",
+        answer: "No. It also supports outbound campaigns such as database reactivation, re-engagement of cold leads, and open house follow-ups."
+    },
+    {
+        question: "What kind of results can I expect?",
+        answer: "Clients report a 3-5x increase in appointment bookings, 15+ hours saved per week, and significant increases in ROI—with some recovering $100k+ in lost revenue."
+    },
+    {
+        question: "Will the AI sound robotic or unnatural?",
+        answer: "Not at all. Our AI agents are designed to sound professional and human, customized with local market knowledge and natural tone."
+    },
+    {
+        question: "What happens after a lead is qualified?",
+        answer: "Once a lead is qualified, the AI agent can live-transfer them, send follow-up materials like videos or brochures, and book appointments directly to your calendar."
+    },
+    {
+        question: "Is the AI compliant with real estate industry standards?",
+        answer: "Yes. CloseLoop’s AI follows compliance guidelines, adheres to local regulations, and protects your data with enterprise-grade security."
     }
 ];

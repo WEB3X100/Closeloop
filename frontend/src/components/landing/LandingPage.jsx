@@ -3,7 +3,6 @@ import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { ProcessSteps } from "./ProcessSteps";
 import { ProblemAgitation } from "./ProblemAgitation";
-import { Features } from "./Features";
 import { HowItWorks } from "./HowItWorks";
 import { Testimonials } from "./Testimonials";
 import { ROICalculator } from "./ROICalculator";
@@ -19,8 +18,6 @@ export default function LandingPage() {
         <Hero />
         <ProcessSteps />
         <ProblemAgitation />
-        <Features />
-        {/* We keep HowItWorks as it shows the '7 Days' timeline specifically, distinct from the 4-step setup process */}
         <HowItWorks />
         <Testimonials />
         <ROICalculator />
