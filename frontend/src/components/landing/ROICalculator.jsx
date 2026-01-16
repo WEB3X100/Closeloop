@@ -69,7 +69,7 @@ export function ROICalculator() {
                 <span className="font-bold text-white text-2xl">{leadsContactedBase} <span className="text-sm font-normal text-slate-500">leads/mo</span></span>
               </div>
               <div className="p-4 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
-                <span className="text-sm text-emerald-400 font-bold block mb-2 uppercase tracking-wide">With CloseLoop (89%)</span>
+                <span className="text-sm text-emerald-400 font-bold block mb-2 uppercase tracking-wide">With AgentoSync (89%)</span>
                 <span className="font-bold text-emerald-400 text-2xl">{leadsContactedAI} <span className="text-sm font-normal text-emerald-600/60">leads/mo</span></span>
               </div>
             </div>

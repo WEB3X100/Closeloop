@@ -1,4 +1,4 @@
-// Mock data for CloseLoop Landing Page
+// Mock data for AgentoSync Landing Page
 
 export const MOCK_ROI_DATA = {
     leadsPerMonth: 50,
@@ -13,11 +13,11 @@ export const MOCK_TESTIMONIALS = [
         role: "Managing Broker",
         agency: "Prestige Realty",
         location: "Austin, TX",
-        quote: "I was skeptical AI could sound human enough for real estate. But CloseLoop's implementation is flawless. It books more appointments than our full-time ISA did - for a fraction of the cost.",
+        quote: "I was skeptical AI could sound human enough for real estate. But AgentoSync's implementation is flawless. It books more appointments than our full-time ISA did - for a fraction of the cost.",
         metric: "+292% appointment increase",
         rating: 5,
         type: "video",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200&h=200"
+        image: "/images/testimonial-1.jpg"
     },
     {
         id: 2,
@@ -25,11 +25,11 @@ export const MOCK_TESTIMONIALS = [
         role: "Broker/Owner",
         agency: "Vancouver Homes Group",
         location: "Vancouver, BC",
-        quote: "We had 200+ leads from last year sitting in our CRM that nobody followed up on. CloseLoop implemented their system and called all of them. 9 became closings.",
+        quote: "We had 200+ leads from last year sitting in our CRM that nobody followed up on. AgentoSync implemented their system and called all of them. 9 became closings.",
         metric: "$180K recovered revenue",
         rating: 5,
         type: "text",
-        image: "https://images.unsplash.com/photo-1573496359-7013ac2bebb8?auto=format&fit=crop&q=80&w=200&h=200"
+        image: "/images/testimonial-2.jpg"
     },
     {
         id: 3,
@@ -37,11 +37,11 @@ export const MOCK_TESTIMONIALS = [
         role: "Team Leader",
         agency: "Desert Elite Properties",
         location: "Phoenix, AZ",
-        quote: "Before CloseLoop, I was calling leads until 9pm every night. My conversion was 2%. Now it's 4.7% and I don't touch the phone.",
+        quote: "Before AgentoSync, I was calling leads until 9pm every night. My conversion was 2%. Now it's 4.7% and I don't touch the phone.",
         metric: "15 hours saved weekly",
         rating: 5,
         type: "video",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200"
+        image: "/images/testimonial-3.jpg"
     }
 ];
 
@@ -56,7 +56,7 @@ export const MOCK_FAQS = [
     },
     {
         question: "What CRMs and lead sources are supported?",
-        answer: "CloseLoop integrates with popular CRMs like Follow Up Boss, KVCore, HubSpot, and lead sources like Zillow, Realtor.com, and Facebook Ads."
+        answer: "AgentoSync integrates with popular CRMs like Follow Up Boss, KVCore, HubSpot, and lead sources like Zillow, Realtor.com, and Facebook Ads."
     },
     {
         question: "How long does setup take?",
@@ -80,6 +80,6 @@ export const MOCK_FAQS = [
     },
     {
         question: "Is the AI compliant with real estate industry standards?",
-        answer: "Yes. CloseLoop’s AI follows compliance guidelines, adheres to local regulations, and protects your data with enterprise-grade security."
+        answer: "Yes. AgentoSync's AI follows compliance guidelines, adheres to local regulations, and protects your data with enterprise-grade security."
     }
 ];

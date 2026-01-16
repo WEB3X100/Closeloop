@@ -64,7 +64,7 @@ export function FinalCTA() {
     try {
       // Prepare query parameters for GET request
       const queryParams = new URLSearchParams(formData).toString();
-      const webhookUrl = `https://only100x.app.n8n.cloud/webhook/closeloop-form?${queryParams}`;
+      const webhookUrl = `https://only100x.app.n8n.cloud/webhook/agentosync-form?${queryParams}`;
 
       await fetch(webhookUrl, {
         method: 'GET',
@@ -102,7 +102,7 @@ export function FinalCTA() {
               See Your First AI Appointment <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Within 7 Days</span>
             </h2>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Join 127+ agencies using CloseLoop to never miss a commission again. Custom implementation. White-glove service.
+              Join 127+ agencies using AgentoSync to never miss a commission again. Custom implementation. White-glove service.
             </p>
 
             <div className="space-y-5">

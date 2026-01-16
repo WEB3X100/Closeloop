@@ -8,9 +8,9 @@ export function Footer() {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
                 <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
-                    <span className="text-[#020817] font-bold text-lg">C</span>
+                    <span className="text-[#020817] font-bold text-lg">A</span>
                 </div>
-                <span className="text-xl font-bold tracking-tight">CloseLoop</span>
+                <span className="text-xl font-bold tracking-tight">AgentoSync</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Automating lead conversion for top-producing real estate teams. Stop chasing leads, start closing deals.
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-sm">© 2025 CloseLoop AI. All rights reserved.</p>
+          <p className="text-slate-500 text-sm">© 2025 AgentoSync AI. All rights reserved.</p>
           <div className="flex gap-6">
              <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-emerald-500/20 hover:text-emerald-400 transition-colors cursor-pointer">
                 <span className="sr-only">Twitter</span>

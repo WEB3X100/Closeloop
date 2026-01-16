@@ -25,15 +25,8 @@ export function Testimonials() {
           {MOCK_TESTIMONIALS.map((testimonial) => (
             <div key={testimonial.id} className="bg-slate-900/40 backdrop-blur-xl rounded-2xl p-6 border border-white/5 flex flex-col h-full hover:bg-slate-800/60 hover:border-purple-500/30 hover:shadow-2xl hover:shadow-purple-900/20 hover:-translate-y-2 transition-all duration-300 group">
               {/* Media Header */}
-              <div className="relative mb-6 rounded-xl overflow-hidden aspect-video bg-slate-800/50 cursor-pointer border border-white/5 shadow-inner">
+              <div className="relative mb-6 rounded-xl overflow-hidden aspect-video bg-slate-800/50 border border-white/5 shadow-inner">
                 <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                {testimonial.type === 'video' && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                    <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center pl-1 shadow-lg transform group-hover:scale-110 transition-transform border border-white/20 group-hover:border-purple-400 group-hover:shadow-purple-500/50">
-                      <Play fill="white" size={24} className="drop-shadow-lg" />
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Content */}

@@ -24,9 +24,9 @@ export function Header() {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="w-9 h-9 bg-gradient-to-br from-emerald-400 to-green-600 rounded-lg flex items-center justify-center shadow-lg shadow-green-900/20">
-              <span className="text-white font-bold text-lg">C</span>
+              <span className="text-white font-bold text-lg">A</span>
           </div>
-          <span className="text-xl font-bold text-white tracking-tight">CloseLoop</span>
+          <span className="text-xl font-bold text-white tracking-tight">AgentoSync</span>
         </div>
 
         {/* Desktop Nav */}

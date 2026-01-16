@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, PlayCircle, Mic, FileText, Video, Star } from "lucide-react";
+import { CalendlyModal } from "./CalendlyModal";
 
 export function Hero() {
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#020817]">
       
@@ -47,9 +49,12 @@ export function Hero() {
             <a href="#demo" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-[#020817] text-lg font-bold px-10 py-5 rounded-full transition-all duration-200 shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] transform hover:-translate-y-1">
               Book Your Free Demo <ArrowRight className="h-5 w-5" />
             </a>
-            <a href="#video" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white backdrop-blur-sm border border-white/10 text-lg font-medium px-10 py-5 rounded-full transition-all duration-200 hover:border-white/20">
+            <button
+              onClick={() => setIsCalendlyOpen(true)}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white backdrop-blur-sm border border-white/10 text-lg font-medium px-10 py-5 rounded-full transition-all duration-200 hover:border-white/20 cursor-pointer"
+            >
               <PlayCircle className="h-5 w-5 text-emerald-400" /> See How It Works
-            </a>
+            </button>
           </div>
 
           {/* Trust Indicators */}
@@ -96,6 +101,12 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Calendly Modal */}
+      <CalendlyModal
+        isOpen={isCalendlyOpen}
+        onClose={() => setIsCalendlyOpen(false)}
+      />
     </section>
   );
 }
